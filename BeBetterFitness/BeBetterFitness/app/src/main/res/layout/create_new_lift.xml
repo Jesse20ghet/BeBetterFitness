@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    <TextView android:id="@+id/title"
+        android:layout_height="35dp"
+        android:layout_width="match_parent"
+        android:text="Create A Lift"
+        android:textAllCaps="true"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:background="@color/colorlightGray"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:padding="10dp"
+        android:background="@drawable/textview_bottomborderthick">
+        <TextView android:layout_height="20dp"
+            android:layout_width="match_parent"
+            android:textSize="15sp"
+            android:textColor="@color/colorBlack"
+            android:textAlignment="center"
+            android:text="Lift Name"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/createALift_LiftName"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:textSize="25sp"
+            android:hint="Enter your lift name"
+            android:textAlignment="center"
+            android:singleLine="true"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/createALift_LiftDescription"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:hint="Enter lift description"
+            android:textAlignment="center"/>
+        <TextView android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Enter muscles associated with this lift."
+            android:gravity="center"
+            android:textSize="15sp"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold">
+
+        </TextView>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+            <TableLayout android:id="@+id/NewLift_AddAMuscle"
+                         android:layout_width="match_parent"
+                         android:layout_height="130dp">
+                <RelativeLayout android:id="@+id/addAnotherMuscleButtonContainer"
+                    android:layout_height="40dp">
+                    <Button android:id="@+id/addAnotherLiftButton"
+                        android:layout_height="40dp"
+                        android:layout_width="200dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/button_addanewlift"
+                        android:onClick="AddNewMuscleRow"
+                        android:text="Add a muscle"/>
+                </RelativeLayout>
+            </TableLayout>
+        </ScrollView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:background="@drawable/button_save"
+                android:text="Save Lift"
+                android:layout_centerInParent="true"
+                android:onClick="SaveLift"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

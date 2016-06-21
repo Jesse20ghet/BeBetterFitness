@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    <TextView android:id="@+id/title"
+            android:layout_height="35dp"
+            android:layout_width="match_parent"
+            android:text="Quote of the day"
+            android:textAllCaps="true"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlack"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:background="@color/colorlightGray"/>
+
+    <TextView android:id="@+id/edit_message"
+        android:layout_width="match_parent"
+        android:layout_height="250sp"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_marginLeft="2sp"
+        android:layout_marginRight="2sp"
+        android:textColor="@color/colorBlack"
+        android:background="@drawable/textview_bottomborderthick"
+        android:text="@string/QuoteOfTheDay" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="280sp"
+        android:background="@color/colorOffWhite">
+
+        <Button android:id = "@+id/debugButton"
+            android:layout_width="80dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginLeft="0sp"
+            android:layout_marginTop="0sp"
+            android:onClick="DebugActivityButtonClick"
+            android:textSize="25sp"
+            android:background="@drawable/button"
+            android:text="Debug"
+            android:textColor="@color/colorOffWhite"
+            android:textStyle="bold"/>
+
+        <RelativeLayout
+            android:layout_width="240sp"
+            android:layout_height="320sp"
+            android:layout_centerInParent="true">
+
+                <Button android:id = "@+id/exerciseButton"
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="@dimen/button_height"
+                    android:text="Exercise"
+                    android:textSize="25sp"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginTop="15sp"
+                    android:onClick="LiftActivityButtonClick"
+                    android:background="@drawable/button"
+                    android:textColor="@color/colorOffWhite"
+                    android:textStyle="bold"/>
+
+                <Button android:id = "@+id/nutritionButton"
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginTop="85sp"
+                    android:onClick="NutritionActivityButtonClick"
+                    android:textSize="25sp"
+                    android:background="@drawable/button"
+                    android:text="Nutrition"
+                    android:textColor="@color/colorOffWhite"
+                    android:textStyle="bold"/>
+
+                <Button android:id = "@+id/cookButton"
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginTop="155sp"
+                    android:onClick="ConfigurationActivityButtonClick"
+                    android:text="Configuration"
+                    android:textColor="@color/colorOffWhite"
+                    android:textSize="25sp"
+                    android:background="@drawable/button"
+                    android:textStyle="bold"/>
+
+                <Button android:id = "@+id/requestButton"
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginTop="225sp"
+                    android:onClick="RequestActivityButtonClick"
+                    android:textSize="25sp"
+                    android:background="@drawable/button"
+                    android:text="Request"
+                    android:textColor="@color/colorOffWhite"
+                    android:textStyle="bold"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

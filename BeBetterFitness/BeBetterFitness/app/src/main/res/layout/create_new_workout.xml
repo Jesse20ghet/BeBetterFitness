@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/liftMain"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textSize="30sp"
+        android:textColor="@color/colorPrimary"
+        android:textAlignment="center"
+        android:background="@color/colorBlack"
+        android:id="@+id/liftCreateWorkoutTitle"
+        android:textStyle="bold"
+        android:text="Create a Workout"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:padding="10dp"
+        android:background="@drawable/textview_bottomborderthick">
+        <TextView android:layout_height="20dp"
+            android:layout_width="match_parent"
+            android:textSize="15sp"
+            android:textColor="@color/colorBlack"
+            android:textAlignment="center"
+            android:text="Workout Name"
+            android:textStyle="bold"/>
+
+        <EditText
+        android:id="@+id/editText_newWorkout_WorkoutName"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:textSize="25sp"
+        android:hint="Enter your workout name"
+        android:textAlignment="center"
+        android:singleLine="true"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="360dp">
+        <TableLayout
+            android:id="@+id/liftTable"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout android:id="@+id/addAnotherLiftButtonContainer"
+                android:layout_height="40dp">
+                <Button android:id="@+id/addAnotherLiftButton"
+                    android:layout_height="40dp"
+                    android:layout_width="200dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/button_addanewlift"
+                    android:onClick="AddNewLiftRow"
+                    android:text="Add a lift"/>
+            </RelativeLayout>
+        </TableLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+        <Button
+            android:id="@+id/btnCreateAWorkout"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="15sp"
+            android:layout_marginLeft="20sp"
+            android:background="@drawable/button_save"
+            android:text="Save Workout"
+            android:textColor="@color/colorOffWhite"
+            android:textStyle="bold"
+            android:onClick="SaveWorkout"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

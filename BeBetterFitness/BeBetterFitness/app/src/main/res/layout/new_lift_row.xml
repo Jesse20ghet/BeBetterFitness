@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableRow
+    android:id="@+id/liftRow"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <Spinner
+        android:id="@+id/liftViewLiftName"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:entries="@array/testStringArray"
+        android:gravity="center_vertical"
+        android:textSize="4sp"/>
+    <TextView
+        android:layout_height="match_parent"
+        android:layout_width="43dp"
+        android:textSize="15sp"
+        android:text="Sets:"
+        android:gravity="center"/>
+    <Spinner
+        android:id="@+id/liftRowSets"
+        android:layout_width="45dp"
+        android:layout_height="match_parent"
+        android:textSize="10sp"/>
+    <TextView
+        android:layout_height="match_parent"
+        android:layout_width="43dp"
+        android:textSize="15sp"
+        android:text="Reps:"
+        android:gravity="center"/>
+    <Spinner
+        android:id="@+id/liftRowReps"
+        android:layout_width="45dp"
+        android:layout_height="match_parent"
+        android:textSize="10sp"/>
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:onClick="DeleteCurrentLiftRow"
+            android:background="@drawable/redx"/>
+</TableRow>

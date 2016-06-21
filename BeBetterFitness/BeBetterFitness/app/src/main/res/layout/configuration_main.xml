@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    <TextView android:id="@+id/title"
+        android:layout_height="35dp"
+        android:layout_width="match_parent"
+        android:text="Configuration Statistics"
+        android:textAllCaps="true"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:background="@color/colorlightGray"/>
+
+    <TextView android:id="@+id/configStatsEditText"
+        android:layout_width="match_parent"
+        android:layout_height="250sp"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_marginLeft="2sp"
+        android:layout_marginRight="2sp"
+        android:textColor="@color/colorBlack"
+        android:background="@drawable/textview_bottomborderthick"
+        android:text="Lifts Created: 42 \n Workouts Created: 11" />
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="280sp"
+        android:background="@color/colorOffWhite">
+
+        <RelativeLayout
+            android:layout_width="240sp"
+            android:layout_height="320sp"
+            android:layout_centerInParent="true">
+
+            <Button android:id = "@+id/createNewLiftButton"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height"
+                android:text="Create a Lift"
+                android:textSize="25sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginTop="15sp"
+                android:onClick="OpenCreateALiftView"
+                android:background="@drawable/button"
+                android:textColor="@color/colorOffWhite"
+                android:textStyle="bold"/>
+
+            <Button android:id = "@+id/createNewWorkoutButton"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:text="Create a Workout"
+            android:textSize="25sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="85sp"
+            android:onClick="OpenCreateAWorkoutView"
+            android:background="@drawable/button"
+            android:textColor="@color/colorOffWhite"
+            android:textStyle="bold"/>
+
+            <Button android:id = "@+id/editDeleteWorkoutButton"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height"
+                android:text="Edit A Workout"
+                android:textSize="25sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginTop="155sp"
+                android:onClick="OpenEditAWorkoutView"
+                android:background="@drawable/button"
+                android:textColor="@color/colorOffWhite"
+                android:textStyle="bold"/>
+
+            <Button android:id = "@+id/editDeleteLiftButton"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height"
+                android:text="Edit A Lift"
+                android:textSize="25sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginTop="225sp"
+                android:onClick="OpenEditALiftView"
+                android:background="@drawable/button"
+                android:textColor="@color/colorOffWhite"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>
