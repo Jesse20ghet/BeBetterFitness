@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
-    <TextView android:id="@+id/title"
+    <TextView android:id="@+id/liftViewTitle"
         android:layout_height="35dp"
         android:layout_width="match_parent"
         android:text="Create A Lift"

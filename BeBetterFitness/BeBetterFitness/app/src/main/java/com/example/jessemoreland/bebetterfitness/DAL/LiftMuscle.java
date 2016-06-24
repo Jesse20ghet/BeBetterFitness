@@ -1,6 +1,7 @@
 package com.example.jessemoreland.bebetterfitness.DAL;
 
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 
 public class LiftMuscle
 {
@@ -46,6 +47,24 @@ public class LiftMuscle
 
                 db.getWritableDatabase().execSQL("INSERT INTO LiftMuscle VALUES(NULL, ?, ?)", args);
             }
+        }
+        catch(Exception ex)
+        {
+            ex.printStackTrace();
+        }
+    }
+
+    public void Delete()
+    {
+        try
+        {
+            SQLiteDatabase sqlLiteDatabase = db.getWritableDatabase();
+
+            String[] selectionArgs = new String[1];
+            selectionArgs[0] = Integer.toString(Id);
+
+            sqlLiteDatabase.execSQL("DELETE FROM LiftMuscle WHERE _id = ?", selectionArgs);
+
         }
         catch(Exception ex)
         {

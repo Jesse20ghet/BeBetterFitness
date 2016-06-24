@@ -26,6 +26,7 @@
         <activity android:name=".Activities.CreateAWorkoutActivity"></activity>
         <activity android:name=".Activities.DebugActivity"></activity>
         <activity android:name=".Activities.EditAWorkoutActivity"></activity>
+        <activity android:name=".Activities.EditALiftActivity"></activity>
         <activity android:name=".Activities.EditIntermediateActivity"></activity>
 
     </application>

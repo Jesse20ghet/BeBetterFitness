@@ -16,7 +16,7 @@ import java.sql.SQLException;
 public class Muscle
 {
     private Context _context;
-    public int id;
+    public int Id;
     public String name;
 
     public Muscle(Context context)

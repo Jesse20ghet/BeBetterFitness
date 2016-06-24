@@ -13,6 +13,7 @@ import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TableLayout;
 import android.widget.TableRow;
+import android.widget.TextView;
 
 import com.example.jessemoreland.bebetterfitness.DAL.Collections.LiftCollection;
 import com.example.jessemoreland.bebetterfitness.DAL.Lift;
@@ -47,6 +48,7 @@ public class EditAWorkoutActivity extends Activity {
         liftCollection.LoadAll(this);
 
         // Change title
+        ((TextView)findViewById(R.id.liftCreateWorkoutTitle)).setText("Edit Workout");
 
         PopulateLists();
     }
@@ -57,7 +59,7 @@ public class EditAWorkoutActivity extends Activity {
         EditText workoutNameEditText = (EditText)findViewById(R.id.editText_newWorkout_WorkoutName);
         workoutNameEditText.setText(workout.WorkoutName);
 
-        // Populate  all associated workouts
+        // Populate  all associated lifts
         Lift lift;
         for(int i = 0; i < workout.workoutLiftCollection.Count(); i++)
         {

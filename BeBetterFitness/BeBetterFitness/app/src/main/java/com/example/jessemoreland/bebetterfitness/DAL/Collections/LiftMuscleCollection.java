@@ -2,6 +2,7 @@ package com.example.jessemoreland.bebetterfitness.DAL.Collections;
 
 import android.content.Context;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 
 import com.example.jessemoreland.bebetterfitness.DAL.DatabaseHelper;
 import com.example.jessemoreland.bebetterfitness.DAL.Lift;
@@ -52,6 +53,14 @@ public class LiftMuscleCollection
         }
     }
 
+    public void DeleteAll()
+    {
+        for(int i = 0; i < _collection.size(); ++i)
+        {
+            _collection.get(i).Delete();
+        }
+    }
+
     public void Save()
     {
         for (LiftMuscle liftMuscle: _collection)
@@ -60,14 +69,40 @@ public class LiftMuscleCollection
         }
     }
 
-    public void LoadAll(Context context)
+    public void LoadByLiftId(int liftId)
+    {
+        SQLiteDatabase sqLiteDatabase = db.getReadableDatabase();
+        try
+        {
+            String[] selectionArgs = new String[1];
+            selectionArgs[0] = Integer.toString(liftId);
+
+            Cursor cursor = sqLiteDatabase.rawQuery("SELECT _id, liftId, muscleId FROM LiftMuscle WHERE liftId = ?", selectionArgs);
+
+            while(cursor.moveToNext())
+            {
+                LiftMuscle liftMuscle = new LiftMuscle(_context);
+
+                liftMuscle.Id = cursor.getInt(cursor.getColumnIndex("_id"));
+                liftMuscle.liftId = cursor.getInt(cursor.getColumnIndex("liftId"));
+                liftMuscle.muscleId = cursor.getInt(cursor.getColumnIndex("muscleId"));
+                _collection.add(liftMuscle);
+            }
+        }
+        catch(Exception ex)
+        {
+            ex.printStackTrace();
+        }
+    }
+
+    public void LoadAll()
     {
         _collection.clear();
         Cursor cursor = db.getReadableDatabase().rawQuery("SELECT _id, liftId, workoutId FROM LiftMuscle", null);
 
         while(cursor.moveToNext())
         {
-            LiftMuscle LiftMuscle = new LiftMuscle(context);
+            LiftMuscle LiftMuscle = new LiftMuscle(_context);
 
             LiftMuscle.Id = cursor.getInt(cursor.getColumnIndex("_id"));
             LiftMuscle.liftId = cursor.getInt(cursor.getColumnIndex("liftId"));

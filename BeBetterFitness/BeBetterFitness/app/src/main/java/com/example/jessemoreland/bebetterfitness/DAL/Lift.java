@@ -24,7 +24,33 @@ public class Lift
 
     public void Load()
     {
+        SQLiteDatabase sqLiteDatabase = db.getReadableDatabase();
+        try
+        {
+            String[] selectionArgs = new String[1];
+            selectionArgs[0] = Integer.toString(Id);
+            Cursor cursor = sqLiteDatabase.rawQuery("SELECT _id, LiftName, Description FROM Lift WHERE _id = ?", selectionArgs);
+            cursor .moveToFirst();
 
+            LiftName = cursor.getString(cursor.getColumnIndex("LiftName"));
+            LiftDescription = cursor.getString(cursor.getColumnIndex("Description"));
+
+            _liftMuscleCollection.LoadByLiftId(Id);
+        }
+        catch(Exception ex)
+        {
+            ex.printStackTrace();
+        }
+    }
+
+    public void Delete()
+    {
+        _liftMuscleCollection.DeleteAll();
+        SQLiteDatabase sqLiteDatabase = db.getWritableDatabase();
+        String[] selectionArgs = new String[1];
+        selectionArgs[0] = Integer.toString(Id);
+
+        sqLiteDatabase.execSQL("DELETE FROM Lift WHERE _id = ?", selectionArgs);
     }
 
     public void SaveLift()

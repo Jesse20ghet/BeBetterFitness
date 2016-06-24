@@ -59,7 +59,7 @@ public class CreateALiftActivity extends Activity {
 
             Spinner muscleSpinner = ((Spinner) muscleTable.findViewById(R.id.muscleRowSpinnerMuscleName));
             Muscle muscle = (Muscle)muscleSpinner.getSelectedItem();
-            Integer muscleId = Integer.parseInt(Integer.toString(muscle.id));
+            Integer muscleId = Integer.parseInt(Integer.toString(muscle.Id));
 
             liftMuscle.muscleId = muscleId;
 

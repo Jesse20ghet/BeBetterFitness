@@ -90,7 +90,19 @@ public class EditIntermediateActivity extends Activity {
 
     public void OpenEditALiftView(View view)
     {
+        Spinner spinRef = (Spinner) findViewById(R.id.editIntermediateSpinner);
+        Lift selectedWorkout = (Lift)spinRef.getSelectedItem();
 
+        try
+        {
+            Intent myIntent = new Intent(view.getContext(), EditALiftActivity.class);
+            myIntent.putExtra("LiftId", selectedWorkout.Id);
+            startActivityForResult(myIntent, 0);
+        }
+        catch(Exception ex)
+        {
+            ex.printStackTrace();
+        }
     }
 
 
