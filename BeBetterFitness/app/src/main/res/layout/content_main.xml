@@ -1,0 +1,119 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <TextView android:id="@+id/title"
+                android:layout_height="35dp"
+                android:layout_width="match_parent"
+                android:text="Quote of the day"
+                android:textAllCaps="true"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorBlack"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:background="@color/colorlightGray"/>
+
+        <TextView android:id="@+id/edit_message"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_marginLeft="2sp"
+            android:layout_marginRight="2sp"
+            android:textColor="@color/colorBlack"
+            android:background="@drawable/textview_bottomborderthick"
+            android:text="@string/QuoteOfTheDay" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="280sp"
+            android:background="@color/colorOffWhite">
+
+            <Button android:id = "@+id/debugButton"
+                android:layout_width="80dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginLeft="0sp"
+                android:layout_marginTop="0sp"
+                android:onClick="DebugActivityButtonClick"
+                android:textSize="25sp"
+                android:background="@drawable/button"
+                android:text="Debug"
+                android:textColor="@color/colorOffWhite"
+                android:textStyle="bold"/>
+
+            <RelativeLayout
+                android:layout_width="240sp"
+                android:layout_height="320sp"
+                android:layout_centerInParent="true">
+
+                    <Button android:id = "@+id/exerciseButton"
+                        android:layout_width="@dimen/button_width"
+                        android:layout_height="@dimen/button_height"
+                        android:text="Exercise"
+                        android:textSize="25sp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:onClick="LiftActivityButtonClick"
+                        android:background="@drawable/button"
+                        android:textColor="@color/colorOffWhite"
+                        android:textStyle="bold"/>
+
+                    <Button android:id = "@+id/nutritionButton"
+                        android:layout_width="@dimen/button_width"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="85dp"
+                        android:onClick="NutritionActivityButtonClick"
+                        android:textSize="25sp"
+                        android:background="@drawable/button"
+                        android:text="Nutrition"
+                        android:textColor="@color/colorOffWhite"
+                        android:textStyle="bold"/>
+
+                    <Button android:id = "@+id/cookButton"
+                        android:layout_width="@dimen/button_width"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="155dp"
+                        android:onClick="ConfigurationActivityButtonClick"
+                        android:text="Configuration"
+                        android:textColor="@color/colorOffWhite"
+                        android:textSize="25sp"
+                        android:background="@drawable/button"
+                        android:textStyle="bold"/>
+
+                    <Button android:id = "@+id/requestButton"
+                        android:layout_width="@dimen/button_width"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="225dp"
+                        android:onClick="RequestActivityButtonClick"
+                        android:textSize="25sp"
+                        android:background="@drawable/button"
+                        android:text="Request"
+                        android:textColor="@color/colorOffWhite"
+                        android:textStyle="bold"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- Side navigation drawer UI -->
+    <ListView
+        android:id="@+id/navList"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|start"
+        android:background="#ffeeeeee"/>
+
+</android.support.v4.widget.DrawerLayout>

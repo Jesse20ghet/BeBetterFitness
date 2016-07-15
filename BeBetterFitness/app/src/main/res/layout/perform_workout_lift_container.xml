@@ -1,0 +1,120 @@
+<LinearLayout
+    android:id="@+id/performAWorkoutLiftContainer"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="vertical"
+    android:background="@drawable/textview_bottomborderthin"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:id="@+id/performAWorkoutLiftCompleted"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/performAWorkoutLiftCompletedText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Lift Completed!"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:textAppearance="@style/AlertDialog.AppCompat.Light"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/LiftSetsRepsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <!-- Layout for lifts sets and reps-->
+        <LinearLayout
+            android:id="@+id/performAWorkoutLiftSetsReps"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical">
+            <TextView android:id="@+id/performAWorkoutLiftName"
+                android:layout_height="40dp"
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:text="Shoulder Press"
+                android:gravity="center_vertical"/>
+            <TextView android:layout_height="40dp"
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:text=" | "
+                android:gravity="center_vertical"/>
+            <TextView android:id="@+id/performAWorkoutSets"
+                android:layout_height="40dp"
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:text="3 Sets"
+                android:gravity="center_vertical"/>
+            <TextView android:layout_height="40dp"
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:text=" | "
+                android:gravity="center_vertical"/>
+            <TextView android:id="@+id/performAWorkoutReps"
+                android:layout_height="40dp"
+                android:layout_width="150dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:textSize="20sp"
+                android:text="10 Reps"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+
+        <!-- Lift Description -->
+        <RelativeLayout
+            android:id="@+id/performAWorkoutLiftDescriptionContainer"
+            android:layout_width="350dp"
+            android:layout_height="77dp"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/performAWorkoutLiftDescription"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="This is test lift description. This is test lift description. This is test lift description. This is test lift description. This is test lift description. This is test lift description. "/>
+        </RelativeLayout>
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:onClick="SwapLiftContext"
+            android:layout_alignParentRight="true"
+            android:layout_margin="7dp"
+            android:background="@drawable/forward_arrow"
+            android:scaleType="fitXY"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/performAWorkoutLiftSliderContainer"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:orientation="vertical">
+        <SeekBar
+            android:id="@+id/performAWorkoutSeekBar"
+            android:layout_width="fill_parent"
+            android:layout_height="12dp"
+            android:layout_margin="1dp"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/progressbar"
+            android:secondaryProgress="0"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:text="Slide to finish lift"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</LinearLayout>
