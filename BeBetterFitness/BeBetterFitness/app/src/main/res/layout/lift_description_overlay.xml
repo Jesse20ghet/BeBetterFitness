@@ -1,0 +1,19 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:textSize="40dp"
+        android:text="Top Text" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Bottom Text"
+        android:layout_gravity="bottom"
+        android:gravity="right"
+        android:textColor="#000"
+        android:textSize="50dp" />
+</FrameLayout>

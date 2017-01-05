@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">BeBetterFitness</string>
+    <string name="enter_lift_name"><i>Enter Lift Name</i></string>
+    <string name="enter_lift_description"><i>Enter Lift Description</i></string>
+    <string name="enter_workout_name"><i>Enter Workout Name</i></string>
+    <string name="edit_message">Enter a message</string>
+    <string name="action_settings">Settings</string>
+    <string name="button_send">Send</string>
+    <string name="title_activity_display_message">My Message</string>
+    <string name="QuoteOfTheDay">\"It\'s never too late to be in the best shape of your life. Your biggest challenge is yourself. Don\'t compare yourself to anyone, compare yourself to who you were yesterday.\"</string>
+    <string name="LiftHeader">Here you can choose a workout, choose a random workout, choose a lift based on muscle, and view past workouts. </string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+    <string-array name="testStringArray">
+        <item>Test Item 1</item>
+        <item>Test Item 2</item>
+        <item>Test Item 3</item>
+        <item>Test Item 4</item>
+    </string-array>
+
+</resources>

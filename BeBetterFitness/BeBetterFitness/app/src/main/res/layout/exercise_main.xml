@@ -1,0 +1,184 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/liftMain"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@drawable/app_background">
+    <TextView android:id="@+id/topTextView"
+        android:layout_height="210dp"
+        android:layout_width="match_parent"
+        android:textSize="15dp"
+        android:lineSpacingExtra="2dp"
+        android:text="@string/LiftHeader"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="@color/colorOffWhite"
+        android:textStyle="bold"
+        android:background="@drawable/app_background">
+    </TextView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="320dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="320sp"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:background="@drawable/button"
+                android:orientation="vertical"
+                android:onClick="ChooseAWorkout">
+                <TextView
+                    android:layout_width="280dp"
+                    android:layout_height="46dp"
+                    android:textSize="32dp"
+                    android:text="Choose a Workout"
+                    android:textColor="@color/colorOffWhite"
+                    android:textStyle="bold"
+                    android:padding="5dp"
+                    android:layout_marginLeft="10dp"/>
+                <TextView
+                    android:layout_width="280dp"
+                    android:layout_height="24dp"
+                    android:textSize="13dp"
+                    android:text="Select any workout that exists in the system."
+                    android:textAlignment="center"
+                    android:textColor="@color/colorOffWhite"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="46dp"/>
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="5dp"
+                    android:src="@drawable/weightlifting_128"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="70dp"
+                android:background="@drawable/button"
+                android:orientation="vertical"
+                android:onClick="ChooseAMuscle">
+                <TextView
+                    android:layout_width="280dp"
+                    android:layout_height="46dp"
+                    android:textSize="32dp"
+                    android:text="Choose a Muscle"
+                    android:textColor="@color/colorOffWhite"
+                    android:textStyle="bold"
+                    android:padding="5dp"
+                    android:layout_marginLeft="10dp"/>
+                <TextView
+                    android:layout_width="280dp"
+                    android:layout_height="24dp"
+                    android:textSize="13dp"
+                    android:text="Get a random lift for a specific muscle."
+                    android:textColor="@color/colorOffWhite"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="46dp"/>
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="5dp"
+                    android:src="@drawable/muscle_128"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="140dp"
+                android:background="@drawable/button"
+                android:orientation="vertical"
+                android:onClick="RandomWorkout">
+                <TextView
+                    android:layout_width="260dp"
+                    android:layout_height="46dp"
+                    android:textSize="32dp"
+                    android:text="Random Workout"
+                    android:textColor="@color/colorOffWhite"
+                    android:textStyle="bold"
+                    android:padding="5dp"
+                    android:layout_marginLeft="10dp"/>
+                <TextView
+                    android:layout_width="260dp"
+                    android:layout_height="24dp"
+                    android:textSize="13dp"
+                    android:text="Start a random workout."
+                    android:textColor="@color/colorOffWhite"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="46dp"/>
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="5dp"
+                    android:src="@drawable/random_128"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="210dp"
+                android:background="@drawable/button"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="280dp"
+                    android:layout_height="46dp"
+                    android:textSize="32dp"
+                    android:text="Exercise Statistics"
+                    android:textColor="@color/colorOffWhite"
+                    android:textStyle="bold"
+                    android:padding="5dp"
+                    android:layout_marginLeft="10dp"/>
+                <TextView
+                    android:layout_width="280dp"
+                    android:layout_height="24dp"
+                    android:textSize="13dp"
+                    android:text="See your statistics for all past workouts."
+                    android:textColor="@color/colorOffWhite"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="46dp"/>
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="5dp"
+                    android:src="@drawable/statistics_128"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>
+    <!-- Side navigation drawer UI -->
+    <ListView
+        android:id="@+id/navList"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|start"
+        android:background="#ffeeeeee"/>
+
+</android.support.v4.widget.DrawerLayout>
